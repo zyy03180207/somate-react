@@ -1,0 +1,45 @@
+@import "../Theme.less";
+@prefixCls: navigation;
+.@{prefixCls} {
+  list-style:none;
+  margin: 0px; /* 与外界元素的距离为0 */
+  padding: 0px; /* 与内部元素的距离为0 */
+  width: 100%; /* 宽度根据元素内容调整 */
+
+  &-div{
+    background: #584C4C;
+    width: 100%;
+    float: left;
+  }
+}
+.@{prefixCls}-item{
+  float:left; /* 向左漂移，将竖排变为横排 */
+}
+.@{prefixCls} li a, .@{prefixCls} li a:visited{
+  //background-color: #584C4C; /* 背景色 */
+  border: 0px #584C4C solid; /* 边框 */
+  color: #FFFFFF; /* 文字颜色 */
+  display: block; /* 此元素将显示为块级元素，此元素前后会带有换行符 */
+  line-height: 1.35em; /* 行高 */
+  margin-right: 0.8px;
+  font-size: 15px;
+  padding: 6.5px 8.5px; /* 内部填充的距离 */
+  text-decoration: none; /* 不显示超链接下划线 */
+  white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
+  &:hover{
+    background-color: #D66464; /* 背景色 */
+    color: #FFFFFF; /* 文字颜色 */
+    text-decoration: none; /* 不显示超链接下划线 */
+  }
+  &:active{
+    background-color: #D66464; /* 背景色 */
+    color: #FFFFFF; /* 文字颜色 */
+    text-decoration: none; /* 不显示超链接下划线 */
+  }
+}
+.@{prefixCls} li > .native {
+  background-color: #D66464; /* 背景色 */
+}
+.@{prefixCls}-select{
+  background-color: #D66464; /* 背景色 */
+}
