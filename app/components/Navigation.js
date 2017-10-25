@@ -39,7 +39,7 @@ export default class Navigation extends React.Component {
         const {prefixCls} = this.props;
         const item = this.getItem();
         return(
-            <div className={`${prefixCls}-div`} style={{paddingLeft:'18px'}}>
+            <div className={`${prefixCls}-div`} style={{paddingLeft:'2%'}}>
             <ul className={`${prefixCls}`}>
                 {item}
             </ul>

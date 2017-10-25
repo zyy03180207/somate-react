@@ -3,6 +3,8 @@ import ActionBar from "../components/ActionBar";
 import Navigation from "../components/Navigation";
 import { Link } from 'react-router-dom';
 import NoticeBar from "../components/NoticeBar";
+import Slider from "../components/Slider";
+import TextWidget from "../components/TextWidget";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'#', name:'首页', sct: true},
@@ -22,6 +24,7 @@ export default class Home extends React.Component {
                 <ActionBar title="静觅  " content="  张阳阳的个人博客" titleStyle={{color:'#FFFFFF'}} actionBarStyle={{background:'#D66464'}}/>
                 <Navigation data={data}/>
                 <NoticeBar title="博主录制的Python3爬虫视频教程已发布！详情请戳Python3爬虫视频教程！希望大家支持！非常感谢！"/>
+                <Slider/><TextWidget/>
             </div>
         );
     }
