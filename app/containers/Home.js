@@ -1,10 +1,17 @@
 import React from 'react';
-import ActionBar from "../components/ActionBar";
-import Navigation from "../components/Navigation";
-import { Link } from 'react-router-dom';
+import Header from "./model/Header";
 import NoticeBar from "../components/NoticeBar";
 import Slider from "../components/Slider";
+import HotBar from "../components/HotBar";
+import Article from "../components/Article";
+import Footer from "../components/Footer";
+import Pagination from "../components/Pagination";
 import TextWidget from "../components/TextWidget";
+import MetasliderWidget from "../components/MetasliderWidget";
+import ArchiveWidget from "../components/ArchiveWidget";
+import PostlistWidget from "../components/PostlistWidget";
+import TagWidget from "../components/TagWidget";
+import LinksWidget from "../components/LinksWidget";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'#', name:'首页', sct: true},
@@ -21,10 +28,39 @@ export default class Home extends React.Component {
         const {data} = this.props;
         return(
             <div>
-                <ActionBar title="静觅  " content="  张阳阳的个人博客" titleStyle={{color:'#FFFFFF'}} actionBarStyle={{background:'#D66464'}}/>
-                <Navigation data={data}/>
-                <NoticeBar title="博主录制的Python3爬虫视频教程已发布！详情请戳Python3爬虫视频教程！希望大家支持！非常感谢！"/>
-                <Slider/><TextWidget/>
+                {/*头部*/}
+                <Header />
+                {/*内容*/}
+                <section className="container">
+                    <NoticeBar/>
+                    <div className="content-wrap">
+                        <div className="content">
+                            {/*banner*/}
+                            {/*<Slider/>*/}
+                            {/*热门控件*/}
+                            <HotBar/>
+                            {/*文章控件*/}
+                            <Article/>
+                            <Article/>
+                            <Article/>
+                            <Article/>
+                            <Article/><Article/><Article/><Article/><Article/><Article/><Article/>
+                            {/*分页控件*/}
+                            <Pagination/>
+                        </div>
+                    </div>
+                    {/*右侧Widget控件*/}
+                    <aside className="sidebar" style={{marginTop:'5px'}}>
+                        <TextWidget/>
+                        <MetasliderWidget/>
+                        <ArchiveWidget/>
+                        <PostlistWidget/>
+                        <TagWidget/>
+                        <LinksWidget/>
+                    </aside>
+                </section>
+                {/*底部*/}
+                <Footer/>
             </div>
         );
     }

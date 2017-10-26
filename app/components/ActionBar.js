@@ -19,11 +19,15 @@ export default class ActionBar extends React.Component {
     render() {
         const {prefixCls,title,content,titleStyle,contentStyle,actionBarStyle} = this.props;
         return(
-            <div className={`${prefixCls}`} style={actionBarStyle}>
-                <a href="/">
-                    <span className={`${prefixCls}-title`} style={titleStyle}>{title}</span>
-                    <span className={`${prefixCls}-content`} style={contentStyle}>{content}</span>
-                </a>
+            <div className="container-inner">
+                <div className="yusi-logo">
+                    <a href="/">
+                        <h1>
+                            <span className="yusi-mono">{title}</span>
+                            <span className="yusi-bloger">{content}</span>
+                        </h1>
+                    </a>
+                </div>
             </div>
         );
     }
