@@ -13,7 +13,7 @@ export default class HotBar extends React.Component {
     render(){
         return(
             <div className="hot-posts">
-                <h2 className="title">热门排行</h2>
+                <h2 className="title">热门排行榜</h2>
                 <ul>
                     <li>
                         <p><span className="muted"><a href="javascript:;" data-action="ding" data-id="1052" id="Addlike" className="action"><i className="fa fa-heart-o"></i><span className="count">2487</span> 喜欢</a>
@@ -34,12 +34,7 @@ export default class HotBar extends React.Component {
                     <li>
                         <p><span className="muted"><a href="javascript:;" data-action="ding" data-id="1319" id="Addlike" className="action"><i className="fa fa-heart-o"></i><span className="count">1436</span> 喜欢</a>
                                     </span>
-                        </p><span className="label label-5">5</span><a href="http://cuiqingcai.com/1319.html" title="Python爬虫利器二之Beautiful Soup的用法">Python爬虫利器二之Beautiful Soup的用法</a></li>
-                    <li>
-                        <p><span className="muted"><a href="javascript:;" data-action="ding" data-id="1319" id="Addlike" className="action"><i className="fa fa-heart-o"></i><span className="count">1436</span> 喜欢</a>
-                                    </span>
-                        </p><span className="label label-5">5</span><a href="http://cuiqingcai.com/1319.html" title="Python爬虫利器二之Beautiful Soup的用法">Python爬虫利器二之Beautiful Soup的用法</a></li>
-
+                        </p><span className="label label-3">5</span><a href="http://cuiqingcai.com/1319.html" title="Python爬虫利器二之Beautiful Soup的用法">Python爬虫利器二之Beautiful Soup的用法</a></li>
                 </ul>
             </div>
         );

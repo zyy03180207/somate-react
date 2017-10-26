@@ -23,7 +23,7 @@ export default class ActionBar extends React.Component {
                 <div className="yusi-logo">
                     <a href="/">
                         <h1>
-                            <span className="yusi-mono">{title}</span>
+                            <span className="yusi-mono" style={{fontFamily:''}}>{title}</span>
                             <span className="yusi-bloger">{content}</span>
                         </h1>
                     </a>

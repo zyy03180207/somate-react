@@ -15,7 +15,6 @@ export default class TextWidget extends React.Component {
             <div className="widget widget_text">
                 <div className="textwidget">
                     <div className="social">
-
                         <a href="http://weibo.com/u/2830678474" rel="external nofollow" title="新浪微博" target="_blank">
                             <i className="sinaweibo fa fa-weibo"></i>
                         </a>
