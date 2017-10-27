@@ -1,10 +1,10 @@
 import React from 'react';
-import ActionBar from "../components/ActionBar";
-import Navigation from "../components/Navigation";
+import ActionBar from "../components/top/ActionBar";
+import Navigation from "../components/content/Navigation";
 import { Link } from 'react-router-dom';
 import Header from "./model/Header";
-import NoticeBar from "../components/NoticeBar";
-import Footer from "../components/Footer";
+import NoticeBar from "../components/content/NoticeBar";
+import Footer from "../components/footer/Footer";
 export default class Exchange extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -34,7 +34,7 @@ export default class Exchange extends React.Component {
         return(
             <div>
                 {/*头部*/}
-                <Header data={data}/>
+                <Header url={this.props.location.pathname}/>
                 {/*内容*/}
                 <section className="container">
                     {/*通知栏*/}

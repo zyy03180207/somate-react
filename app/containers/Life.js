@@ -1,18 +1,17 @@
 import React from 'react';
-import HotBar from "../components/HotBar";
-import Article from "../components/Article";
-import Footer from "../components/Footer";
-import Pagination from "../components/Pagination";
-import TextWidget from "../components/TextWidget";
-import MetasliderWidget from "../components/MetasliderWidget";
-import ArchiveWidget from "../components/ArchiveWidget";
-import PostlistWidget from "../components/PostlistWidget";
-import TagWidget from "../components/TagWidget";
-import LinksWidget from "../components/LinksWidget";
-import LeftContent from "../components/LeftContent";
-import RightContent from "../components/RightContent";
+import Article from "../components/content/Article";
+import Footer from "../components/footer/Footer";
+import Pagination from "../components/content/Pagination";
+import TextWidget from "../components/widget/TextWidget";
+import MetasliderWidget from "../components/widget/MetasliderWidget";
+import ArchiveWidget from "../components/widget/ArchiveWidget";
+import PostlistWidget from "../components/widget/PostlistWidget";
+import TagWidget from "../components/widget/TagWidget";
+import LinksWidget from "../components/widget/LinksWidget";
+import LeftContent from "../components/group/LeftContent";
+import RightContent from "../components/group/RightContent";
 import Header from "./model/Header";
-import NoticeBar from "../components/NoticeBar";
+import NoticeBar from "../components/content/NoticeBar";
 export default class Life extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -37,12 +36,16 @@ export default class Life extends React.Component {
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
     }
 
+    constructor(props, context){
+        super(props);
+    }
+
     render() {
         const {data} = this.props;
         return(
             <div>
                 {/*头部*/}
-                <Header data={data}/>
+                <Header url={this.props.location.pathname}/>
                 {/*内容*/}
                 <section className="container">
                     {/*通知栏*/}

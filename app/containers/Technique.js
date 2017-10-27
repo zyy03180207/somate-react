@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from "./model/Header";
-import NoticeBar from "../components/NoticeBar";
-import LeftContent from "../components/LeftContent";
-import Article from "../components/Article";
-import Pagination from "../components/Pagination";
-import RightContent from "../components/RightContent";
-import TextWidget from "../components/TextWidget";
-import MetasliderWidget from "../components/MetasliderWidget";
-import ArchiveWidget from "../components/ArchiveWidget";
-import PostlistWidget from "../components/PostlistWidget";
-import TagWidget from "../components/TagWidget";
-import LinksWidget from "../components/LinksWidget";
-import Footer from "../components/Footer";
+import NoticeBar from "../components/content/NoticeBar";
+import LeftContent from "../components/group/LeftContent";
+import Article from "../components/content/Article";
+import Pagination from "../components/content/Pagination";
+import RightContent from "../components/group/RightContent";
+import TextWidget from "../components/widget/TextWidget";
+import MetasliderWidget from "../components/widget/MetasliderWidget";
+import ArchiveWidget from "../components/widget/ArchiveWidget";
+import PostlistWidget from "../components/widget/PostlistWidget";
+import TagWidget from "../components/widget/TagWidget";
+import LinksWidget from "../components/widget/LinksWidget";
+import Footer from "../components/footer/Footer";
 export default class Technique extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -41,7 +41,7 @@ export default class Technique extends React.Component {
         return(
             <div>
                 {/*头部*/}
-                <Header data={data}/>
+                <Header url={this.props.location.pathname}/>
                 {/*内容*/}
                 <section className="container">
                     {/*通知栏*/}

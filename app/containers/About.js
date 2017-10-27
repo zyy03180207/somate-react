@@ -1,10 +1,17 @@
 import React from 'react';
-import ActionBar from "../components/ActionBar";
-import Navigation from "../components/Navigation";
+import ActionBar from "../components/top/ActionBar";
+import Navigation from "../components/content/Navigation";
 import { Link } from 'react-router-dom';
 import Header from "./model/Header";
-import NoticeBar from "../components/NoticeBar";
-import Footer from "../components/Footer";
+import NoticeBar from "../components/content/NoticeBar";
+import Footer from "../components/footer/Footer";
+import WrapperPage from "../components/group/WrapperPage";
+import TopHeader from "../components/top/TopHeader";
+import ArticleContent from "../components/group/ArticleContent";
+import PersonProfile from "../components/content/PersonProfile";
+import PersonSkill from "../components/content/PersonSkill";
+import Contact from "../components/content/Contact";
+import Comment from "../components/content/Comment";
 export default class About extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -34,11 +41,26 @@ export default class About extends React.Component {
         return(
             <div>
                 {/*头部*/}
-                <Header data={data}/>
+                <Header url={this.props.location.pathname}/>
                 {/*内容*/}
                 <section className="container">
                     {/*通知栏*/}
                     <NoticeBar/>
+                    {/*页面包装*/}
+                    <WrapperPage>
+                        <TopHeader/>
+                        <ArticleContent>
+                            <div style={{textIndent:'0px'}}>
+                                {/*个人简介*/}
+                                <PersonProfile/>
+                                {/*技能*/}
+                                <PersonSkill/>
+                                <Contact/>
+                            </div>
+                        </ArticleContent>
+                        {/*评论*/}
+                        <Comment/>
+                    </WrapperPage>
                 </section>
                 <Footer/>
             </div>
