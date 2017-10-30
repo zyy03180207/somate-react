@@ -13,7 +13,7 @@ export default class Slider extends React.Component {
 
     render(){
         return(
-            <div id="wowslider-container1">
+            <div id="wowslider-container1" style={{marginBottom:'10px',marginLeft:'30px',zIndex:'0'}}>
                 <div className="ws_images">
                     <ul>
                         <li>

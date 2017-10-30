@@ -1,5 +1,6 @@
 import React from 'react';
-/*记载动画*/
+import '../../../build/js/common.js';
+/*热门专题*/
 export default class MetasliderWidget extends React.Component {
 
     static defaultProps={
@@ -29,6 +30,7 @@ export default class MetasliderWidget extends React.Component {
 
                     </div>
                 </div>
+                {timer_metaslider_2698()}
             </div>
         );
     }

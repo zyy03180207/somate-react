@@ -68,6 +68,21 @@ export default class Navigation extends React.Component {
         }
         return itemArr;
     }
+
+    onBlur=()=>{
+        // if(this.refs.myTextInput.value=='')this.refs.myTextInput.value='search...';
+    }
+
+    onFocus=()=>{
+        // if(this.refs.myTextInput.value=='search...')this.refs.myTextInput.value='';
+    }
+
+    onSubmit=()=>{
+        /*alert(location.href);
+        location.href='http://localhost:3000/?s=' + encodeURIComponent(this.refs.myTextInput).replace(/%20/g, '+');
+        return false;*/
+    }
+
     render(){
         const {prefixCls} = this.props;
         const item = this.getItem();
@@ -76,6 +91,18 @@ export default class Navigation extends React.Component {
                 <div id="nav-header" className="navbar">
                     <ul className="nav">
                         {item}
+                        <li style={{float:'right'}}>
+                            <div className="toggle-search"><i className="fa fa-search"></i></div>
+                            <div className="search-expand" style={{display: 'none'}}>
+                                <div className="search-expand-inner">
+                                    <form method="get" className="searchform themeform" onSubmit={this.onSubmit()} action="/">
+                                        <div>
+                                            <input ref="myTextInput" type="text" className="search" name="s" onBlur={this.onBlur()} onFocus={this.onFocus()} defaultValue="search..."/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

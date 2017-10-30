@@ -1,5 +1,5 @@
 import React from 'react';
-/*记载动画*/
+/*猜你喜欢*/
 export default class PostlistWidget extends React.Component {
 
     static defaultProps={

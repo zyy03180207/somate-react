@@ -14,6 +14,7 @@ import TagWidget from "../components/widget/TagWidget";
 import LinksWidget from "../components/widget/LinksWidget";
 import LeftContent from "../components/group/LeftContent";
 import RightContent from "../components/group/RightContent";
+import PositionWidget from "../components/widget/PositionWidget";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: true,data:[]},
@@ -51,7 +52,7 @@ export default class Home extends React.Component {
                     {/*左侧*/}
                     <LeftContent>
                         {/*banner*/}
-                        {/*<Slider/>*/}
+                        <Slider/>
                         {/*热门控件*/}
                         <HotBar/>
                         {/*文章控件*/}
@@ -67,7 +68,10 @@ export default class Home extends React.Component {
                     {/*右侧Widget控件*/}
                     <RightContent>
                         <TextWidget/>
-                        {/*<MetasliderWidget/>*/}
+                        {/*热门专题*/}
+                        <MetasliderWidget/>
+                        {/*职位推荐*/}
+                        {/*<PositionWidget/>*/}
                         <PostlistWidget/>
                         <ArchiveWidget/>
                         <TagWidget/>
