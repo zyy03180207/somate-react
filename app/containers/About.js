@@ -48,7 +48,7 @@ export default class About extends React.Component {
                     <NoticeBar/>
                     {/*页面包装*/}
                     <WrapperPage>
-                        <TopHeader/>
+                        <TopHeader title="关于自己"/>
                         <ArticleContent>
                             <div style={{textIndent:'0px'}}>
                                 {/*个人简介*/}

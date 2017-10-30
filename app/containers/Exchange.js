@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 import Header from "./model/Header";
 import NoticeBar from "../components/content/NoticeBar";
 import Footer from "../components/footer/Footer";
+import WrapperPage from "../components/group/WrapperPage";
+import TopHeader from "../components/top/TopHeader";
+import ArticleContent from "../components/group/ArticleContent";
+import Change from "../components/content/Change";
 export default class Exchange extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -39,6 +43,12 @@ export default class Exchange extends React.Component {
                 <section className="container">
                     {/*通知栏*/}
                     <NoticeBar/>
+                    <WrapperPage>
+                        <TopHeader title="技术交流"/>
+                        <ArticleContent>
+                            <Change/>
+                        </ArticleContent>
+                    </WrapperPage>
                 </section>
                 <Footer/>
             </div>

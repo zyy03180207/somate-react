@@ -1,4 +1,5 @@
 import React from 'react';
+import './Skill.less';
 /*个人简介*/
 export default class Skill extends React.Component {
 

@@ -5,11 +5,7 @@ export default class TopHeader extends React.Component {
 
     static defaultProps={
         prefixCls: 'action-bar',
-        title: '标题',
-        content: '内容',
-        titleStyle: {},
-        contentStyle: {},
-        actionBarStyle: {},
+        title: '标题'
     }
 
     constructor(props, context){
@@ -17,11 +13,11 @@ export default class TopHeader extends React.Component {
     }
 
     render() {
-        const {} = this.props;
+        const {title} = this.props;
         return(
             <header className="pageheader clearfix">
                 <h1 className="pull-left">
-                    <a href="/about">关于自己</a>
+                    <a href="/about">{title}</a>
                 </h1>
                 <div className="pull-right">
                     <span className="action action-share bdsharebuttonbox">

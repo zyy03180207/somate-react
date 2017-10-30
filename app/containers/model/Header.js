@@ -75,7 +75,7 @@ export default class Header extends React.Component {
         const {url} = this.props;
         let data = this.getData(url);
         return(
-            <header id="header" class="header" style={{zIndex:'1'}}>
+            <header id="header" className="header" style={{zIndex:'1'}}>
                 <ActionBar title="十五度 " content="人理解迭代，神理解递归" titleStyle={{color:'#FFFFFF'}} actionBarStyle={{background:'#D66464'}}/>
                 <Navigation data={data}/>
             </header>

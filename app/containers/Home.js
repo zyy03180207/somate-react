@@ -67,9 +67,9 @@ export default class Home extends React.Component {
                     {/*右侧Widget控件*/}
                     <RightContent>
                         <TextWidget/>
-                        <MetasliderWidget/>
-                        <ArchiveWidget/>
+                        {/*<MetasliderWidget/>*/}
                         <PostlistWidget/>
+                        <ArchiveWidget/>
                         <TagWidget/>
                         <LinksWidget/>
                     </RightContent>
