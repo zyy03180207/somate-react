@@ -15,7 +15,7 @@ export default class Change extends React.Component {
     render() {
         const {prefixCls} = this.props;
         return (
-            <div>
+            <div style={{backgroundColor:'#FFF'}}>
                 <div id="qrcodes">
                     <div className="row">
                         <GroupCard name="进击的Coder" title1="想结交更多的朋友吗?来进击的Coder瞧瞧吧"

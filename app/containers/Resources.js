@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Header from "./model/Header";
 import NoticeBar from "../components/content/NoticeBar";
 import LeftContent from "../components/group/LeftContent";
-import Article from "../components/content/Article";
+import Article from "../components/content/article/Article";
 import Pagination from "../components/content/Pagination";
 import RightContent from "../components/group/RightContent";
 import TextWidget from "../components/widget/TextWidget";

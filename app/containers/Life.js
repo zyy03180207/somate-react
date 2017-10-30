@@ -1,5 +1,5 @@
 import React from 'react';
-import Article from "../components/content/Article";
+import Article from "../components/content/article/Article";
 import Footer from "../components/footer/Footer";
 import Pagination from "../components/content/Pagination";
 import TextWidget from "../components/widget/TextWidget";

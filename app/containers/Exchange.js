@@ -1,7 +1,4 @@
 import React from 'react';
-import ActionBar from "../components/top/ActionBar";
-import Navigation from "../components/content/Navigation";
-import { Link } from 'react-router-dom';
 import Header from "./model/Header";
 import NoticeBar from "../components/content/NoticeBar";
 import Footer from "../components/footer/Footer";

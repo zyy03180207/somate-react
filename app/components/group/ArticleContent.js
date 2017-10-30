@@ -13,9 +13,9 @@ export default class ArticleContent extends React.Component {
     render(){
         const {children} = this.props;
         return(
-            <div className="article-content">
+            <article className="article-content">
                 {children}
-            </div>
+            </article>
 
         );
     }

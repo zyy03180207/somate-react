@@ -97,7 +97,7 @@ export default class Navigation extends React.Component {
                                 <div className="search-expand-inner">
                                     <form method="get" className="searchform themeform" onSubmit={this.onSubmit()} action="/">
                                         <div>
-                                            <input ref="myTextInput" type="text" className="search" name="s" onBlur={this.onBlur()} onFocus={this.onFocus()} defaultValue="search..."/>
+                                            <input ref="myTextInput" type="text" className="search" name="s" onBlur={this.onBlur()} onFocus={this.onFocus()} placeholder="search..."/>
                                         </div>
                                     </form>
                                 </div>

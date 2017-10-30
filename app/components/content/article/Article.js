@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 export default class Article extends React.Component {
 
     static defaultProps={
@@ -13,14 +13,14 @@ export default class Article extends React.Component {
     render() {
         return (
             <article className="excerpt">
-                <header><a className="label label-important" href="http://cuiqingcai.com/category/technique/python">Python<i
-                    className="label-arrow"></i></a>
-                    <h2><a target="_blank" href="http://cuiqingcai.com/4853.html" title="一个采集系统的构建">一个采集系统的构建 </a></h2>
+                <header><Link className="label label-important" to="/category/technique/python">Python<i
+                    className="label-arrow"></i></Link>
+                    <h2><Link target="_blank" to="/4853.html" title="一个采集系统的构建">一个采集系统的构建 </Link></h2>
                 </header>
                 <div className="focus">
-                    <a target="_blank" href="http://cuiqingcai.com/4853.html"><img className="thumb"
+                    <Link target="_blank" to="/4853.html"><img className="thumb"
                                                                                    src="http://cuiqingcai.com/wp-content/themes/Yusi/timthumb.php?src=http://qiniu.cuiqingcai.com/wp-content/uploads/2017/09/00602RHagw1f7yyuxxeucj305i05i744.jpg&h=123&w=200&q=90&zc=1&ct=1"
-                                                                                   alt="一个采集系统的构建"/></a>
+                                                                                   alt="一个采集系统的构建"/></Link>
                 </div>
                 <span className="note"> 整个系统:采集系统:转载请注明：静觅 &raquo; 一个采集系统的构建...</span>
                 <p className="auth-span">

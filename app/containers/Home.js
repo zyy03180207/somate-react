@@ -3,7 +3,7 @@ import Header from "./model/Header";
 import NoticeBar from "../components/content/NoticeBar";
 import Slider from "../components/content/Slider";
 import HotBar from "../components/content/HotBar";
-import Article from "../components/content/Article";
+import Article from "../components/content/article/Article";
 import Footer from "../components/footer/Footer";
 import Pagination from "../components/content/Pagination";
 import TextWidget from "../components/widget/TextWidget";

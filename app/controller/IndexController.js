@@ -10,6 +10,7 @@ import About from "../containers/About";
 import Message from "../containers/Message";
 import Donate from "../containers/Donate";
 import Exchange from "../containers/Exchange";
+import ArticleInfo from "../containers/ArticleInfo";
 const history = createHistory();
 class IndexController extends React.Component {
 
@@ -56,7 +57,8 @@ class IndexController extends React.Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/message" component={Message}/>
             <Route exact path="/donate" component={Donate}/>
-            <Route exact path="/exchange" component={Exchange}/></Switch>
+            <Route exact path="/exchange" component={Exchange}/>
+            <Route exact path="/*.html" component={ArticleInfo}/></Switch>
         </Router>);
     }
 

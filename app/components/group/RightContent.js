@@ -13,7 +13,7 @@ export default class RightContent extends React.Component {
     render(){
         const {children} = this.props;
         return(
-            <aside className="sidebar" style={{marginTop:'5px'}}>
+            <aside className="sidebar">
                 {children}
             </aside>
 
