@@ -38,6 +38,9 @@ export default class Life extends React.Component {
 
     constructor(props, context){
         super(props);
+        this.state={
+            url: this.props.location.pathname
+        };
     }
 
     render() {

@@ -110,7 +110,7 @@ export default class ArticleInfo extends React.Component {
                         <ArticleSponsor/>
                         <Change/>
                         <ArticleSwitch/>
-                        <ArticleRecommend/>
+                        {/*<ArticleRecommend/>*/}
                         <Comment/>
                     </LeftContent>
                     {/*右侧Widget控件*/}

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch, HashRouter as Router} from 'react-router-dom';
+import { Route, Switch, HashRouter, Router, BrowserRouter} from 'react-router-dom';
 import Home from '../containers/Home.js';
 import createHistory from 'history/createBrowserHistory';
 import Life from "../containers/Life";
@@ -39,28 +39,30 @@ class IndexController extends React.Component {
 
     render() {
         return(
-        <Router history={history}><Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/category/life" component={Life}/>
-            <Route exact path="/category/life/notes" component={Life}/>
-            <Route exact path="/category/life/daily" component={Life}/>
-            <Route exact path="/category/life/presatation" component={Life}/>
-            <Route exact path="/category/technique" component={Technique}/>
-            <Route exact path="/category/technique/cc" component={Technique}/>
-            <Route exact path="/category/technique/java" component={Technique}/>
-            <Route exact path="/category/technique/php" component={Technique}/>
-            <Route exact path="/category/technique/html" component={Technique}/>
-            <Route exact path="/category/technique/python" component={Technique}/>
-            <Route exact path="/category/technique/javascript" component={Technique}/>
-            <Route exact path="/category/technique/other" component={Technique}/>
-            <Route exact path="/category/resources" component={Resources}/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/message" component={Message}/>
-            <Route exact path="/donate" component={Donate}/>
-            <Route exact path="/exchange" component={Exchange}/>
-            <Route exact path="/*.html" component={ArticleInfo}/>
-            <Route exact path="/date/****/**" component={Technique}/></Switch>
-        </Router>);
+        <HashRouter history={history}>
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/category/life" component={Life}/>
+                <Route exact path="/category/life/notes" component={Life}/>
+                <Route exact path="/category/life/daily" component={Life}/>
+                <Route exact path="/category/life/presatation" component={Life}/>
+                <Route exact path="/category/technique" component={Technique}/>
+                <Route exact path="/category/technique/cc" component={Technique}/>
+                <Route exact path="/category/technique/java" component={Technique}/>
+                <Route exact path="/category/technique/php" component={Technique}/>
+                <Route exact path="/category/technique/html" component={Technique}/>
+                <Route exact path="/category/technique/python" component={Technique}/>
+                <Route exact path="/category/technique/javascript" component={Technique}/>
+                <Route exact path="/category/technique/other" component={Technique}/>
+                <Route exact path="/category/resources" component={Resources}/>
+                <Route exact path="/about" component={About}/>
+                <Route exact path="/message" component={Message}/>
+                <Route exact path="/donate" component={Donate}/>
+                <Route exact path="/exchange" component={Exchange}/>
+                <Route exact path="/*.html" component={ArticleInfo}/>
+                <Route exact path="/date/****/**" component={Technique}/>
+            </Switch>
+        </HashRouter>);
     }
 
 }

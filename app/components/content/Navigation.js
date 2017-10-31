@@ -78,8 +78,7 @@ export default class Navigation extends React.Component {
     }
 
     onSubmit=()=>{
-        /*alert(location.href);
-        location.href='http://localhost:3000/?s=' + encodeURIComponent(this.refs.myTextInput).replace(/%20/g, '+');
+        /*location.href='http://localhost:3000/?s=' + encodeURIComponent(this.refs.myTextInput).replace(/%20/g, '+');
         return false;*/
     }
 
@@ -95,7 +94,7 @@ export default class Navigation extends React.Component {
                             <div className="toggle-search"><i className="fa fa-search"></i></div>
                             <div className="search-expand" style={{display: 'none'}}>
                                 <div className="search-expand-inner">
-                                    <form method="get" className="searchform themeform" onSubmit={this.onSubmit()} action="/">
+                                    <form method="get" className="searchform themeform" onSubmit={this.onSubmit()} action="/seach">
                                         <div>
                                             <input ref="myTextInput" type="text" className="search" name="s" onBlur={this.onBlur()} onFocus={this.onFocus()} placeholder="search..."/>
                                         </div>

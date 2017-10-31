@@ -1,13 +1,13 @@
 {
-  "name": "hzl-web",
+  "name": "somate",
   "version": "1.0.0",
-  "description": "",
+  "description": "个人博客",
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress --config webpack.pro.js",
     "start": "webpack-dev-server --port 3000 --open --hot --host 127.0.0.1 --config webpack.dev.js"
   },
-  "author": "",
+  "author": "Open Suns",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -42,5 +42,16 @@
     "react-router-redux": "^5.0.0-alpha.6",
     "react-transition-group": "^2.2.0",
     "redux": "^3.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyy03180207/somate-react.git"
+  },
+  "keywords": [
+    "个人博客前端模板","个人博客","前端模板"
+  ],
+  "bugs": {
+    "url": "https://github.com/zyy03180207/somate-react/issues"
+  },
+  "homepage": "http://127.0.0.1:3000"
 }

@@ -37,6 +37,14 @@ export default class Home extends React.Component {
             {url:'/message', name:'给我留言', sct: false,data:[]},
             {url:'/donate', name:'赞助作者', sct: false,data:[]},
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
+
+    }
+
+    constructor(props, context){
+        super(props);
+        this.state={
+            url: this.props.location.pathname
+        };
     }
 
     render() {
