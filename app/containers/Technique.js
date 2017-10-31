@@ -36,6 +36,11 @@ export default class Technique extends React.Component {
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
     }
 
+    constructor(props, context){
+        super(props);
+        // alert();
+    }
+
     render() {
         const {data} = this.props;
         return(

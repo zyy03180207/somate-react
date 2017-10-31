@@ -27,7 +27,7 @@ import ArticleSwitch from "../components/content/article/ArticleSwitch";
 import ArticleRecommend from "../components/content/article/ArticleRecommend";
 export default class ArticleInfo extends React.Component {
     static defaultProps={
-        data:[{url:'/', name:'首页', sct: true,data:[]},
+        data:[{url:'/', name:'首页', sct: false,data:[]},
             {url:'/category/life', name:'生活笔记', sct: false,data:[
                 {url:'/category/life/notes', name:'个人随笔', sct: false},
                 {url:'/category/life/daily', name:'个人日记', sct: false},
@@ -54,7 +54,7 @@ export default class ArticleInfo extends React.Component {
         return(
             <div>
                 {/*头部*/}
-                <Header/>
+                <Header />
                 {/*内容*/}
                 <section className="container">
                     {/*通知栏*/}

@@ -15,7 +15,7 @@ export default class Article extends React.Component {
             <article className="excerpt">
                 <header><Link className="label label-important" to="/category/technique/python">Python<i
                     className="label-arrow"></i></Link>
-                    <h2><Link target="_blank" to="/4853.html" title="一个采集系统的构建">一个采集系统的构建 </Link></h2>
+                    <h2><Link  to="/4853.html" title="一个采集系统的构建">一个采集系统的构建 </Link></h2>
                 </header>
                 <div className="focus">
                     <Link target="_blank" to="/4853.html"><img className="thumb"

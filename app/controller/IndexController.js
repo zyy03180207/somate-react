@@ -58,7 +58,8 @@ class IndexController extends React.Component {
             <Route exact path="/message" component={Message}/>
             <Route exact path="/donate" component={Donate}/>
             <Route exact path="/exchange" component={Exchange}/>
-            <Route exact path="/*.html" component={ArticleInfo}/></Switch>
+            <Route exact path="/*.html" component={ArticleInfo}/>
+            <Route exact path="/date/****/**" component={Technique}/></Switch>
         </Router>);
     }
 

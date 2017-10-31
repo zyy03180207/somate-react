@@ -5,7 +5,7 @@ import Navigation from "../../components/content/Navigation";
 export default class Header extends React.Component {
 
     static defaultProps={
-        url:'/',
+        url:'',
         data:[{url:'/', name:'首页', sct: false,data:[]},
             {url:'/category/life', name:'生活笔记', sct: false,data:[
                 {url:'/category/life/notes', name:'个人随笔', sct: false},
