@@ -65,7 +65,7 @@ export default class Technique extends React.Component {
                     {/*右侧Widget控件*/}
                     <RightContent>
                         <TextWidget/>
-                        <MetasliderWidget/>
+                        {/*<MetasliderWidget/>*/}
                         <ArchiveWidget/>
                         <PostlistWidget/>
                         <TagWidget/>

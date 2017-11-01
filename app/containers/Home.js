@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from "./model/Header";
 import NoticeBar from "../components/content/NoticeBar";
-import Slider from "../components/content/Slider";
 import HotBar from "../components/content/HotBar";
 import Article from "../components/content/article/Article";
 import Footer from "../components/footer/Footer";
@@ -14,7 +13,7 @@ import TagWidget from "../components/widget/TagWidget";
 import LinksWidget from "../components/widget/LinksWidget";
 import LeftContent from "../components/group/LeftContent";
 import RightContent from "../components/group/RightContent";
-import PositionWidget from "../components/widget/PositionWidget";
+import Slider from "../components/content/Slider";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: true,data:[]},
@@ -60,7 +59,7 @@ export default class Home extends React.Component {
                     {/*左侧*/}
                     <LeftContent>
                         {/*banner*/}
-                        <Slider/>
+                        {/*<Slider/>*/}
                         {/*热门控件*/}
                         <HotBar/>
                         {/*文章控件*/}
@@ -77,7 +76,7 @@ export default class Home extends React.Component {
                     <RightContent>
                         <TextWidget/>
                         {/*热门专题*/}
-                        <MetasliderWidget/>
+                        {/*<MetasliderWidget/>*/}
                         {/*职位推荐*/}
                         {/*<PositionWidget/>*/}
                         <PostlistWidget/>

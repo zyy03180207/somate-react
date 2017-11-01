@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch, HashRouter, Router, BrowserRouter} from 'react-router-dom';
+import { Route, Switch, HashRouter as Router } from 'react-router-dom';
 import Home from '../containers/Home.js';
 import createHistory from 'history/createBrowserHistory';
 import Life from "../containers/Life";
@@ -37,9 +37,13 @@ class IndexController extends React.Component {
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
     }
 
+    constructor(props, context){
+        super(props);
+    }
+
     render() {
         return(
-        <HashRouter history={history}>
+        <Router history={history}>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/category/life" component={Life}/>
@@ -62,7 +66,7 @@ class IndexController extends React.Component {
                 <Route exact path="/*.html" component={ArticleInfo}/>
                 <Route exact path="/date/****/**" component={Technique}/>
             </Switch>
-        </HashRouter>);
+        </Router>);
     }
 
 }

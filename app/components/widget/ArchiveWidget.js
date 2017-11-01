@@ -10,6 +10,9 @@ export default class ArchiveWidget extends React.Component {
         super(props);
     }
 
+    componentWillMount(){
+    }
+
     render(){
         return(
             <div className="widget widget_archive">

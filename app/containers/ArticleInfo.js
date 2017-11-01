@@ -49,6 +49,8 @@ export default class ArticleInfo extends React.Component {
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
     }
 
+
+
     render() {
         const {data} = this.props;
         return(
@@ -117,7 +119,7 @@ export default class ArticleInfo extends React.Component {
                     <RightContent>
                         <TextWidget/>
                         {/*热门专题*/}
-                        <MetasliderWidget/>
+                        {/*<MetasliderWidget/>*/}
                         {/*职位推荐*/}
                         {/*<PositionWidget/>*/}
                         <PostlistWidget/>
