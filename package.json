@@ -48,7 +48,9 @@
     "url": "git+https://github.com/zyy03180207/somate-react.git"
   },
   "keywords": [
-    "个人博客前端模板","个人博客","前端模板"
+    "个人博客前端模板",
+    "个人博客",
+    "前端模板"
   ],
   "bugs": {
     "url": "https://github.com/zyy03180207/somate-react/issues"

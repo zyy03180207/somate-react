@@ -6,14 +6,13 @@ import Article from "../components/content/article/Article";
 import Footer from "../components/footer/Footer";
 import Pagination from "../components/content/Pagination";
 import TextWidget from "../components/widget/TextWidget";
-import MetasliderWidget from "../components/widget/MetasliderWidget";
 import ArchiveWidget from "../components/widget/ArchiveWidget";
 import PostlistWidget from "../components/widget/PostlistWidget";
 import TagWidget from "../components/widget/TagWidget";
 import LinksWidget from "../components/widget/LinksWidget";
 import LeftContent from "../components/group/LeftContent";
 import RightContent from "../components/group/RightContent";
-import Slider from "../components/content/Slider";
+import Post from '../common/Post';
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: true,data:[]},
@@ -36,18 +35,39 @@ export default class Home extends React.Component {
             {url:'/message', name:'给我留言', sct: false,data:[]},
             {url:'/donate', name:'赞助作者', sct: false,data:[]},
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
+        article:[],
 
     }
 
     constructor(props, context){
         super(props);
         this.state={
-            url: this.props.location.pathname
+            article: []
         };
     }
 
+    componentDidMount(){
+        Post('getArticle', '{}', function(res) {
+            this.setState({article: res.data});
+        }.bind(this));
+    }
+
+    getArticle=()=>{
+        const {article} = this.state;
+        const itemArr = [];
+        for(let i = 0; i < article.length; i ++) {
+            let item = article[i];
+            let itemEl = (<Article  key={`${i}`} title={item.title} introduce={item.introduce}
+            imgSrc={item.img} visit={item.looknum} author={item.author} kind={item.source}
+            time={item.ctime}/>);
+            itemArr.push(itemEl);
+        }
+        return itemArr;
+    }
+
     render() {
-        const {data} = this.props;
+        const {} = this.props;
+        const articleItem = this.getArticle();
         return(
             <div>
                 {/*头部*/}
@@ -63,12 +83,8 @@ export default class Home extends React.Component {
                         {/*热门控件*/}
                         <HotBar/>
                         {/*文章控件*/}
-                        <Article/>
-                        <Article/>
-                        <Article/>
-                        <Article/>
-                        <Article/><Article/><Article/><Article/><Article/><Article/><Article/>
-                        <Article/><Article/><Article/><Article/><Article/><Article/>
+                        {/*<Article/>*/}
+                        {articleItem}
                         {/*分页控件*/}
                         <Pagination/>
                     </LeftContent>

@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var extractCss = new ExtractTextPlugin("styles.css");
+var proxy = require('http-proxy-middleware')
 module.exports = {
     entry: {
         common: ['react', 'react-dom'],
@@ -16,6 +17,13 @@ module.exports = {
     devServer: {
         hot: true,
         contentBase: path.resolve(__dirname, 'build'),
+        port: '3000', //设置端口号
+        proxy: {
+            '/bolgInf': {
+                target: 'http://192.168.1.32:8080/blog/blog',
+                secure: false
+            }
+        }
     },
     module: {
         rules: [
