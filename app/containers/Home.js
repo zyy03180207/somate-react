@@ -58,8 +58,8 @@ export default class Home extends React.Component {
         for(let i = 0; i < article.length; i ++) {
             let item = article[i];
             let itemEl = (<Article  key={`${i}`} title={item.title} introduce={item.introduce}
-            imgSrc={item.img} visit={item.looknum} author={item.author} kind={item.source}
-            time={item.ctime}/>);
+            imgSrc={item.img} visit={item.looknum} author={item.author} kind={item.type}
+            time={item.ctime} url={`${item.id}.html`}/>);
             itemArr.push(itemEl);
         }
         return itemArr;
@@ -86,7 +86,7 @@ export default class Home extends React.Component {
                         {/*<Article/>*/}
                         {articleItem}
                         {/*分页控件*/}
-                        <Pagination/>
+                        {/*<Pagination/>*/}
                     </LeftContent>
                     {/*右侧Widget控件*/}
                     <RightContent>

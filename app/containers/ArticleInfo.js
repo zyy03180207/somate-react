@@ -1,20 +1,14 @@
 import React from 'react';
 import Header from "./model/Header";
 import NoticeBar from "../components/content/NoticeBar";
-import Slider from "../components/content/Slider";
-import HotBar from "../components/content/HotBar";
-import Article from "../components/content/article/Article";
 import Footer from "../components/footer/Footer";
-import Pagination from "../components/content/Pagination";
 import TextWidget from "../components/widget/TextWidget";
-import MetasliderWidget from "../components/widget/MetasliderWidget";
 import ArchiveWidget from "../components/widget/ArchiveWidget";
 import PostlistWidget from "../components/widget/PostlistWidget";
 import TagWidget from "../components/widget/TagWidget";
 import LinksWidget from "../components/widget/LinksWidget";
 import LeftContent from "../components/group/LeftContent";
 import RightContent from "../components/group/RightContent";
-import PositionWidget from "../components/widget/PositionWidget";
 import ArticleLink from "../components/content/article/ArticleLink";
 import ArticleHead from "../components/content/article/ArticleHead";
 import Banner from "../components/content/article/Banner";
@@ -24,7 +18,7 @@ import ArticleSponsor from "../components/content/article/ArticleSponsor";
 import Change from "../components/content/Change";
 import Comment from "../components/content/Comment";
 import ArticleSwitch from "../components/content/article/ArticleSwitch";
-import ArticleRecommend from "../components/content/article/ArticleRecommend";
+import Post from '../common/Post';
 export default class ArticleInfo extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -49,10 +43,29 @@ export default class ArticleInfo extends React.Component {
             {url:'/exchange', name:'技术交流', sct: false,data:[]}],
     }
 
+    constructor(props, context){
+        super(props);
+        this.state={
+            articleInfo: {"keyword": 'dsada'}
+        };
+    }
 
+    componentDidMount(){
+        let url = this.props.location.pathname;
+        let id = url.substring(url.lastIndexOf('/') + 1, url.length - 5);
+        Post('getArticleInfo', '{id:"'+ id +'"}', function(res) {
+            this.setState({articleInfo: res.data});
+        }.bind(this));
+    }
 
+    getInfo=()=> {
+        let {content} = this.state.articleInfo;
+        let itemEl = (<div dangerouslySetInnerHTML={{__html:content}}></div>);
+        return itemEl;
+    }
     render() {
-        const {data} = this.props;
+        const item = this.getInfo();
+        const {title, ctime, looknum, author, type} = this.state.articleInfo;
         return(
             <div>
                 {/*头部*/}
@@ -64,56 +77,19 @@ export default class ArticleInfo extends React.Component {
                     {/*左侧*/}
                     <LeftContent>
                         {/*文章分类连接*/}
-                        <ArticleLink/>
-                        <ArticleHead/>
+                        <ArticleLink title={title} oneKind="技术杂谈" twoKind={type}/>
+                        <ArticleHead title={title} time={ctime} visit={looknum}
+                                     comment="0" author={author} kind={type}/>
                         <Banner/>
                         <ArticleContent>
-                            <p><strong><b>PS：此文章为小白提供，大佬请绕道！！！！</b></strong></p>
-                            <p><strong>首先特别感谢大才哥给我提供这个平台，未来我希望把java这个版块的内容补全。</strong></p>
-                            <p>今天要讲的是数据类型，最最最基础的内容~</p>
-                            <p>java标识符、数据类型、关键字</p>
-                            <p>开始我们先看下如何注释java代码。</p>
-                            <p>标识符：类名，方法名，变量。</p>
-                            <p>有三种方式分别为</p>
-                            <p>//表示注释一行代码</p>
-                            <p></p>
-                            <p>表示注释一行或者多行代码</p>
-                            <p>&nbsp;</p>
-                            <p>(从上面到下面都是注释的代码）</p>
-                            <p></p>
-                            <p><strong><b>PS：此文章为小白提供，大佬请绕道！！！！</b></strong></p>
-                            <p><strong>首先特别感谢大才哥给我提供这个平台，未来我希望把java这个版块的内容补全。</strong></p>
-                            <p>今天要讲的是数据类型，最最最基础的内容~</p>
-                            <p>java标识符、数据类型、关键字</p>
-                            <p>开始我们先看下如何注释java代码。</p>
-                            <p>标识符：类名，方法名，变量。</p>
-                            <p>有三种方式分别为</p>
-                            <p>//表示注释一行代码</p>
-                            <p></p>
-                            <p>表示注释一行或者多行代码</p>
-                            <p>&nbsp;</p>
-                            <p>(从上面到下面都是注释的代码）</p>
-                            <p></p>
-                            <p><strong><b>PS：此文章为小白提供，大佬请绕道！！！！</b></strong></p>
-                            <p><strong>首先特别感谢大才哥给我提供这个平台，未来我希望把java这个版块的内容补全。</strong></p>
-                            <p>今天要讲的是数据类型，最最最基础的内容~</p>
-                            <p>java标识符、数据类型、关键字</p>
-                            <p>开始我们先看下如何注释java代码。</p>
-                            <p>标识符：类名，方法名，变量。</p>
-                            <p>有三种方式分别为</p>
-                            <p>//表示注释一行代码</p>
-                            <p></p>
-                            <p>表示注释一行或者多行代码</p>
-                            <p>&nbsp;</p>
-                            <p>(从上面到下面都是注释的代码）</p>
-                            <p></p>
+                            {item}
                             <ArticleFooter/>
                         </ArticleContent>
                         <ArticleSponsor/>
                         <Change/>
                         <ArticleSwitch/>
                         {/*<ArticleRecommend/>*/}
-                        <Comment/>
+                        {/*<Comment/>*/}
                     </LeftContent>
                     {/*右侧Widget控件*/}
                     <RightContent>

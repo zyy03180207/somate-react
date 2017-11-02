@@ -4,6 +4,7 @@
   "description": "个人博客",
   "main": "index.js",
   "scripts": {
+    "builds": "webpack --config webpack.config.js",
     "build": "webpack --progress --config webpack.pro.js",
     "start": "webpack-dev-server --port 3000 --open --hot --host 127.0.0.1 --config webpack.dev.js"
   },

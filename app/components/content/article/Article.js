@@ -4,10 +4,10 @@ import Post from '../../../common/Post';
 export default class Article extends React.Component {
 
     static defaultProps={
-        kindUrl: '21312321',
+        kindUrl: '',
         kind: '3213131',
         title: '3213123213',
-        url: '32131312',
+        url: '00000.html',
         imageSrc: '321321\ndasdad\ndsadadsa',
         introduce: '312312312312312321321312',
         authorUrl: '',
@@ -31,10 +31,10 @@ export default class Article extends React.Component {
             <article className="excerpt">
                 <header><Link className="label label-important" to={kindUrl}>{kind}<i
                     className="label-arrow"></i></Link>
-                    <h2><Link  to={url} title={title}>{title} </Link></h2>
+                    <h2><Link target="_blank"  to={url} title={title}>{title} </Link></h2>
                 </header>
                 <div className="focus">
-                    <Link target="_blank" to="/4853.html">
+                    <Link target="_blank" to={url}>
                         <img className="thumb"
                           src={imgSrc}
                           alt={title}/></Link>
