@@ -4,7 +4,6 @@ import NoticeBar from "../components/content/NoticeBar";
 import HotBar from "../components/content/HotBar";
 import Article from "../components/content/article/Article";
 import Footer from "../components/footer/Footer";
-import Pagination from "../components/content/Pagination";
 import TextWidget from "../components/widget/TextWidget";
 import ArchiveWidget from "../components/widget/ArchiveWidget";
 import PostlistWidget from "../components/widget/PostlistWidget";
@@ -13,6 +12,7 @@ import LinksWidget from "../components/widget/LinksWidget";
 import LeftContent from "../components/group/LeftContent";
 import RightContent from "../components/group/RightContent";
 import Post from '../common/Post';
+import Pagination from "../components/content/Pagination";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: true,data:[]},
@@ -42,7 +42,7 @@ export default class Home extends React.Component {
     constructor(props, context){
         super(props);
         this.state={
-            article: []
+            article: [],
         };
     }
 
@@ -86,7 +86,7 @@ export default class Home extends React.Component {
                         {/*<Article/>*/}
                         {articleItem}
                         {/*分页控件*/}
-                        {/*<Pagination/>*/}
+                        <Pagination pageIndex={13} pageSize={10} total={200} LENGTH={8}/>
                     </LeftContent>
                     {/*右侧Widget控件*/}
                     <RightContent>
