@@ -19,7 +19,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'build'),
         port: '3000', //设置端口号
         proxy: {
-            '/bolgInf': {
+            '/blog/blog': {
                 target: 'http://192.168.1.32:8080/blog/blog',
                 secure: false
             }

@@ -101,7 +101,8 @@ export default class ArticleInfo extends React.Component {
                         <PostlistWidget/>
                         <ArchiveWidget/>
                         <TagWidget/>
-                        <LinksWidget/>
+                        {/*相关连接*/}
+                        {/*<LinksWidget/>*/}
                     </RightContent>
                 </section>
                 {/*底部*/}

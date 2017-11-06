@@ -1,5 +1,5 @@
 import React from 'react';
-/*记载动画*/
+/*友情链接*/
 export default class LinksWidget extends React.Component {
 
     static defaultProps={

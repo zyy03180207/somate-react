@@ -13,6 +13,7 @@ import LeftContent from "../components/group/LeftContent";
 import RightContent from "../components/group/RightContent";
 import Post from '../common/Post';
 import Pagination from "../components/content/Pagination";
+import ArticleContent from "../components/content/article/ArticleContent";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: true,data:[]},
@@ -41,33 +42,9 @@ export default class Home extends React.Component {
 
     constructor(props, context){
         super(props);
-        this.state={
-            article: [],
-        };
-    }
-
-    componentDidMount(){
-        Post('getArticle', '{}', function(res) {
-            this.setState({article: res.data});
-        }.bind(this));
-    }
-
-    getArticle=()=>{
-        const {article} = this.state;
-        const itemArr = [];
-        for(let i = 0; i < article.length; i ++) {
-            let item = article[i];
-            let itemEl = (<Article  key={`${i}`} title={item.title} introduce={item.introduce}
-            imgSrc={item.img} visit={item.looknum} author={item.author} kind={item.type}
-            time={item.ctime} url={`${item.id}.html`}/>);
-            itemArr.push(itemEl);
-        }
-        return itemArr;
     }
 
     render() {
-        const {} = this.props;
-        const articleItem = this.getArticle();
         return(
             <div>
                 {/*头部*/}
@@ -84,9 +61,8 @@ export default class Home extends React.Component {
                         <HotBar/>
                         {/*文章控件*/}
                         {/*<Article/>*/}
-                        {articleItem}
-                        {/*分页控件*/}
-                        <Pagination pageIndex={13} pageSize={10} total={200} LENGTH={8}/>
+                        <ArticleContent/>
+
                     </LeftContent>
                     {/*右侧Widget控件*/}
                     <RightContent>

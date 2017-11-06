@@ -18,15 +18,20 @@ export default class HotBar extends React.Component {
     }
 
     getItem=()=>{
-        const {hot} = this.state;
+        let {hot} = this.state;
         let itemArr = [];
-        for(let i = 0; i < hot.length-4; i++) {
-            let item = hot[i];
-            let itemEl = (<li key={`hot-li-${i}`}>
-                    <p><span className="muted"><a href="javascript:;" data-action="ding" data-id="1052" id="Addlike" className="action"><i className="fa fa-heart-o"></i><span className="count">2487</span> 喜欢</a>
+        if(hot.length > 0) {
+            for (let i = 0; i < 5; i++) {
+                let item = hot[i];
+                let itemEl = (<li key={`hot-li-${i + 1}`}>
+                    <p><span className="muted"><a href="javascript:;" data-action="ding" data-id="1052" id="Addlike"
+                                                  className="action"><i className="fa fa-heart-o"></i><span
+                        className="count">2487</span> 喜欢</a>
                                     </span>
-                    </p><span className="label label-1">{i}</span><a href="http://cuiqingcai.com/1052.html" title={item.title}>{item.title}</a></li>);
-            itemArr.push(itemEl);
+                    </p><span className="label label-1">{i + 1}</span><a href="http://cuiqingcai.com/1052.html"
+                                                                         title={item.title}>{item.title}</a></li>);
+                itemArr.push(itemEl);
+            }
         }
         return itemArr;
     }

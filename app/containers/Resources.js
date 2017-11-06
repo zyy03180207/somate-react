@@ -15,6 +15,7 @@ import PostlistWidget from "../components/widget/PostlistWidget";
 import TagWidget from "../components/widget/TagWidget";
 import LinksWidget from "../components/widget/LinksWidget";
 import Footer from "../components/footer/Footer";
+import ArticleContent from "../components/content/article/ArticleContent";
 export default class Resources extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: false,data:[]},
@@ -51,14 +52,7 @@ export default class Resources extends React.Component {
                     <NoticeBar/>
                     {/*左侧*/}
                     <LeftContent>
-                        <Article/>
-                        <Article/>
-                        <Article/>
-                        <Article/>
-                        <Article/><Article/><Article/><Article/><Article/><Article/><Article/>
-                        <Article/><Article/><Article/><Article/><Article/><Article/>
-                        {/*分页控件*/}
-                        <Pagination/>
+                        <ArticleContent/>
                     </LeftContent>
                     {/*右侧Widget控件*/}
                     <RightContent>
