@@ -50,7 +50,6 @@ export default class Header extends React.Component {
             ]},
             {url:'/category/resources', name:'福利专区', sct: false,data:[]},
             {url:'/about', name:'关于自己', sct: false,data:[]},
-            {url:'/message', name:'给我留言', sct: false,data:[]},
             {url:'/donate', name:'赞助作者', sct: false,data:[]},
             {url:'/exchange', name:'技术交流', sct: false,data:[]}];
         for(let i = 0; i < data.length; i++){

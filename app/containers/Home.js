@@ -45,6 +45,8 @@ export default class Home extends React.Component {
     }
 
     render() {
+        alert("dsdsdsd");
+        console.log("dsadasdasda")
         return(
             <div>
                 {/*头部*/}

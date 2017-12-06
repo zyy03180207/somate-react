@@ -21,7 +21,7 @@ module.exports = {
         port: '63342', //设置端口号
         historyApiFallback: true,
         proxy: {
-            '/bolgInf': {
+            '/blog/blog': {
                 target: 'http://192.168.1.32:8080/blog/blog',
                 secure: false
             }
