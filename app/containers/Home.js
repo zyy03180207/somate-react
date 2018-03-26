@@ -14,6 +14,7 @@ import RightContent from "../components/group/RightContent";
 import Post from '../common/Post';
 import Pagination from "../components/content/Pagination";
 import ArticleContent from "../components/content/article/ArticleContent";
+import Slider from "../components/content/Slider";
 export default class Home extends React.Component {
     static defaultProps={
         data:[{url:'/', name:'首页', sct: true,data:[]},
@@ -45,8 +46,6 @@ export default class Home extends React.Component {
     }
 
     render() {
-        alert("dsdsdsd");
-        console.log("dsadasdasda")
         return(
             <div>
                 {/*头部*/}
@@ -58,7 +57,7 @@ export default class Home extends React.Component {
                     {/*左侧*/}
                     <LeftContent>
                         {/*banner*/}
-                        {/*<Slider/>*/}
+                        <Slider/>
                         {/*热门控件*/}
                         <HotBar/>
                         {/*文章控件*/}
